@@ -5,7 +5,7 @@ import matplotlib.style as style
 import numpy as np
 style.use('fivethirtyeight')
 
-st.set_page_config(page_title="Test REsults", page_icon="🎓")
+st.set_page_config(page_title="Test Results", page_icon="🎓")
 st.sidebar.header("Test Result")
 
 
