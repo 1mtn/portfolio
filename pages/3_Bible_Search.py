@@ -13,7 +13,7 @@ import matplotlib.pyplot as plt
 
 bible = pd.read_csv("kjv.csv", skiprows=4,index_col=0)
 
-target_word  = 'insight'
+target_word  = 'wisdom'
 target_word_2 = 'Light'
 target_word = st.text_input("First Word", value="Jesus")
 target_word_2 = st.text_input("Second Word", value="Lord")
