@@ -2,8 +2,5 @@ streamlit>=1.26.0
 pandas
 numpy
 matplotlib
-sklearn.model_selection
-sklearn.preprocessing 
-sklearn.linear_model
-sklearn.metrics
+sklearn
 seaborn
