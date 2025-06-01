@@ -136,6 +136,7 @@ st.markdown("""
                 - Pandas
                 - NumPy
                 - Matplotlib
+                - scikit-learn
                 - Seaborn
                 - Streamlit
             - SQL
