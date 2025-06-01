@@ -151,6 +151,29 @@ with tabs[2]:
     st.subheader("How to Read Graph")
     st.write("The \"Feature Coefficients (Log-Odds)\" graph shows how each feature in the logistic regression model affects the likelihood of heart disease. Each horizontal bar represents a feature’s coefficient, where the length indicates the strength of its impact, and the direction (right or left) shows whether it increases or decreases the risk. A positive bar (extending right) means a higher feature value raises the chance of heart disease, while a negative bar (extending left) lowers it. For example, a long positive bar for `sex` (coefficient: 0.8390) indicates that males (`sex=1`) have a significantly higher risk of heart disease compared to females. " \
     "The graph uses standardized features, so each coefficient reflects the effect of a one-standard-deviation change in the feature. For instance, a negative bar for `thalach` (coefficient: -0.3812) suggests that a higher maximum heart rate (about 19 beats per minute) reduces the risk of heart disease, as it’s linked to better heart fitness. This visualization helps you understand which factors, like blocked vessels (`ca`) or chest pain type (`cp_4`), are most important in predicting heart disease and whether they increase or decrease the risk.")
+    
+    #Feature Descriptions
+    st.subheader("Feature Descriptions")
+    feature_descriptions = pd.DataFrame({
+    'Feature': ['age', 'sex', 'cp', 'trestbps', 'chol', 'fbs', 'restecg', 'thalach', 'exang', 'oldpeak', 'slope', 'ca', 'thal', 'present'],
+    'Full Name': [
+        'Age (years)', 
+        'Sex (0=Female, 1=Male)', 
+        'Chest Pain Type (1=Typical Angina, 2=Atypical Angina, 3=Non-Anginal, 4=Asymptomatic)', 
+        'Resting Blood Pressure (mmHg)', 
+        'Cholesterol (mg/dl)', 
+        'Fasting Blood Sugar > 120 mg/dl (0=No, 1=Yes)', 
+        'Resting ECG (0=Normal, 1=ST-T Abnormality, 2=LV Hypertrophy)', 
+        'Maximum Heart Rate (beats per minute)', 
+        'Exercise-Induced Angina (0=No, 1=Yes)', 
+        'ST Depression (mm)', 
+        'Slope of ST Segment (1=Upsloping, 2=Flat, 3=Downsloping)', 
+        'Number of Major Vessels (0-3)', 
+        'Thalassemia (3=Normal, 6=Fixed Defect, 7=Reversible Defect)', 
+        'Heart Disease (0=No, 1=Yes)']    
+        })  
+    st.dataframe(feature_descriptions)
+
 
 # Tab 4: Prediction Tool
 with tabs[3]:
