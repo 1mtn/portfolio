@@ -126,6 +126,12 @@ with tabs[2]:
     sns.barplot(x='Log-Odds', y='Feature', data=coef_df, ax=ax)
     ax.set_title("Feature Coefficients (Log-Odds)")
     st.pyplot(fig)
+
+    # Brief Explanation of Log-Odds and Odds Ratio
+    st.subheader("Explaining Log-Odds and Odds Ratios")
+    st.markdown("""
+    In logistic regression, a method used to predict outcomes like "yes or no" (e.g., will it rain?), **log-odds** and **odds ratio** help explain the likelihood of something happening. **Odds** are the chance of an event occurring versus not occurring, like 2:1 (twice as likely to happen than not). **Log-odds** is a way to transform these odds into a number that's easier for math in the model—it's like a simplified score of likelihood. The **odds ratio** compares odds between groups, say, how much more likely it is to rain if it's cloudy versus sunny. Together, they help the model predict and explain probabilities in a clear way.
+    """)
     
     # Performance metrics
     y_test_pred = model.predict(X_test)
