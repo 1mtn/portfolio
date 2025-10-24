@@ -33,6 +33,10 @@ y_pred = mnb.predict(X_test)
 
 # Streamlit App
 st.title('SMS Spam Classifier - Multinomial Naive Bayes Model')
+st.markdown("""
+Based on [SMS Spam Collection dataset](https://archive.ics.uci.edu/dataset/228/sms+spam+collection) from UCI Irvine. |
+See my code on [Github](https://github.com/1mtn/portfolio/blob/8d20760b7bf6481e46494bdbc51dbc7710b64863/pages/5_Naive_Byes_Multinomial_Model.py)
+            """)
 
 st.header('Project Overview')
 st.write("""
@@ -57,6 +61,7 @@ if st.button('Classify'):
         st.write('Please enter some text.')
 
 st.header('Dataset Sample')
+st.write('Label 1 = Spam, 0 = Ham (Not spam)')
 st.dataframe(df.head(10))
 
 st.header('How The Model Works')
